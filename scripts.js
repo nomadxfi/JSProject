@@ -1,29 +1,57 @@
-/* Задание на урок:
+"use strict";
 
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
+// let number = 4.6;
+//
+// const object = {
+//     name: "Joe",
+//     age: 25,
+//     weight: false
+// };
 
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
+// console.log(object.name);
+// console.log(object["name"]);
 
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате:
-    movies: {
-        'logan': '8.1'
-    }
+// let array = ['plum.png', 'orange.jpg', 'apple.swg', 780, {}, [] ];
+// console.log(array[5]);
 
-Проверить, чтобы все работало без ошибок в консоли */
+// alert('hello!');
 
-'use strict';
+// const result = confirm("Are u here?");
+// console.log(result);
 
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
-document.write(`Просмотрено фильмов: ${numberOfFilms}`);
+// const answer = +prompt("Вам есть 18?", "");
+// console.log(answer+5);
 
-console.log(numberOfFilms);
+const answers = [];
+
+answers[0] = prompt('What is u name?', "");
+answers[1] = prompt('What is u surname?', "");
+answers[2] = prompt('What is u age?', "");
+
+// document.write(typeof(answers));
+console.log(answers);
+
+// const category = "toys";
+//
+// console.log(`https://someurl.com/${category}/5`);
+
+// const user = "Ivan";
+//
+// alert(`Hello, ${user}`);
+
+// console.log(4 + +"44");
+
+// let incr = 10,
+//     decr = 10;
+//
+// // ++incr;
+// // --decr;
+//
+// console.log(++incr);
+// console.log(--decr);
+
+// const isChecked = false,
+//     isClose = false;
+// console.log(isChecked || !isClose);
+
+// console.log(2+2*2 !=='6');
