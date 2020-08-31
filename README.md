@@ -1,3 +1,1 @@
-# TestProject
-
-test
+# Learn JavaScript
