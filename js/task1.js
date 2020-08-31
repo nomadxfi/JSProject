@@ -8,7 +8,7 @@
     - movies - в это свойство поместить пустой объект
     - actors - тоже поместить пустой объект
     - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
+    - private - в это свойство поместить boolean(логическое) значение false
 
 3) Задайте пользователю по два раза вопросы:
     - 'Один из последних просмотренных фильмов?'
@@ -23,7 +23,24 @@
 
 'use strict';
 
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
+const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?","");
 document.write(`Просмотрено фильмов: ${numberOfFilms}`);
 
 console.log(numberOfFilms);
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false,
+};
+
+const movies = [];
+movies[0] = prompt("Один из последних просмотренных фильмов?", "");
+movies[1] = prompt("На сколько оцените его?", "");
+movies[2] = prompt("Один из последних просмотренных фильмов?", "");
+movies[3] = prompt("На сколько оцените его?", "");
+
+// document.write(answers[0],answers[1]);
+console.log(movies);

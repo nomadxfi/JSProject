@@ -22,14 +22,14 @@
 // const answer = +prompt("Вам есть 18?", "");
 // console.log(answer+5);
 
-const answers = [];
-
-answers[0] = prompt('What is u name?', "");
-answers[1] = prompt('What is u surname?', "");
-answers[2] = prompt('What is u age?', "");
-
-// document.write(typeof(answers));
-console.log(answers);
+// const answers = [];
+//
+// answers[0] = prompt('What is u name?', "");
+// answers[1] = prompt('What is u surname?', "");
+// answers[2] = prompt('What is u age?', "");
+//
+// // document.write(typeof(answers));
+// console.log(answers);
 
 // const category = "toys";
 //
