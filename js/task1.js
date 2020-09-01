@@ -26,7 +26,7 @@
 const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?","");
 document.write(`Просмотрено фильмов: ${numberOfFilms}`);
 
-console.log(numberOfFilms);
+// console.log(numberOfFilms);
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -35,12 +35,26 @@ const personalMovieDB = {
     genres: [],
     private: false,
 };
+// моё решение:
 
-const movies = [];
-movies[0] = prompt("Один из последних просмотренных фильмов?", "");
-movies[1] = prompt("На сколько оцените его?", "");
-movies[2] = prompt("Один из последних просмотренных фильмов?", "");
-movies[3] = prompt("На сколько оцените его?", "");
+// const movies = [];
+// movies[0] = prompt("Один из последних просмотренных фильмов?", "");
+// movies[1] = prompt("На сколько оцените его?", "");
+// movies[2] = prompt("Один из последних просмотренных фильмов?", "");
+// movies[3] = prompt("На сколько оцените его?", "");
+//
+// // document.write(answers[0],answers[1]);
+// console.log(movies);
 
-// document.write(answers[0],answers[1]);
-console.log(movies);
+
+// правильное решение:
+
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
