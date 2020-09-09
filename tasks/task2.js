@@ -15,8 +15,6 @@
 
 'use strict';
 
-// Код возьмите из предыдущего домашнего задания
-
 const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
@@ -26,6 +24,9 @@ const personalMovieDB = {
     genres: [],
     private: false,
 };
+
+
+//решение задачи с помощью цикла for
 
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
@@ -39,13 +40,56 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 
+};
+
+//решение задачи с помощью цикла while
+
+let i = 0;
+
+while (i < 2) {
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
+    i++;
+
+    if (a != null && b != null && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+
 }
+
+//решение задачи с помощью do
+
+let i = 0;
+
+do {
+    const a = prompt('Какой последний фильм вы смотрели?',''),
+        b = prompt('Оцените его в баллах');
+    i++;
+
+    if (a != null && b != null && a !== '' && b !== '' && a.length < 50) {
+        personalMovieDB.movies[a]=b;
+        alert('done');
+        console.log(personalMovieDB);
+    } else {
+        alert('error');
+        i--;
+    }
+
+}
+while (i < 2);
+
+
+//4-е задание:
 
 if (personalMovieDB.count < 10) {
     console.log("Просмотрено довольно мало фильмов");
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     console.log("Вы классический зритель");
-} else if (personalMovieDB.count >= 30){
+} else if (personalMovieDB.count >= 30) {
     console.log("Вы киноман");
 } else {
     console.log("Произошла ошибка");
