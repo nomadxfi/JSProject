@@ -1,65 +1,95 @@
 'use strict';
 
-// //решение задачи с циклом while
-// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
+// function checkAge(age) {
+//     if (age) {
+//         return confirm('Sure!?')
+//     }
+// }
 //
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     private: false,
-// };
+// let age = prompt('How old are you?','');
 //
-// let i = 0;
-//
-// while (i < 2) {
-//     const a = prompt('Какой последний фильм вы смотрели?', ''),
-//         b = prompt('Оцените его в баллах', '');
-//     i++;
-//
-//     // personalMovieDB.movies[a]=b;
-//     // console.log(personalMovieDB);
-//
-//     // console.log(`Просмотрено фильмов: ${numberOfFilms}`);
-//     // console.log(`Фильм: ${a}`);
-//     // console.log(`Оценка: ${b}`);
-//
-//     if (a != null && b != null && a !== '' && b !== '' && a.length < 50) {
-//         personalMovieDB.movies[a] = b;
-//         console.log('done');
+// if (checkAge(age>=18)) {
+//     alert('Access');
+// } else {
+//     alert('Denied');
+// }
+
+// function checkAge(age) {
+//     return (age > 18) ? true : confirm('Are u sure?');
+// }
+// function checkAge(age) {
+//     return (age >18) || confirm('Are u sure?');
+// }
+
+// function min(a, b) {
+//     if (a < b) {
+//         return a;
 //     } else {
-//         console.log('error')
-//         i--;
+//         return b;
 //     }
 // }
 
-//решение задачи с помощью do
+// function min(a, b) {
+//     if (a < b) {
+//         return a;
+//     } else {
+//         return b;
+//     }
+//
+// }
+// console.log( min(2,5));
+// console.log( min(3,-1));
+// console.log( min(1,1));
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
+function pow(x, n) {
+    let result = x;
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    private: false,
-}
-
-let i = 0;
-
-do {
-    const a = prompt('Какой последний фильм вы смотрели?',''),
-        b = prompt('Оцените его в баллах');
-    i++;
-
-    if (a != null && b != null && a !== '' && b !== '' && a.length < 50) {
-        personalMovieDB.movies[a]=b;
-        alert('done');
-        console.log(personalMovieDB);
-    } else {
-        alert('error');
-        i--;
+    for (let i = 1; i < n; i++) {
+        result *= x;
     }
+    return result;
 }
-while (i < 2);
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n < 1) {
+    alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+} else {
+    alert(pow(x,n));
+}
+
+// function pow(a, b) {
+//     if (b > 0 && (b % 1) == 0)
+//         return (a ** b);
+//     else
+//         return `Округлите число ${b} до натурального`;
+// }
+//
+// console.log(pow(3, 2));
+// console.log(pow(3, 3));
+// console.log(pow(3, 100));
+
+// let x = prompt('Введите основание степени','1');
+// let n = prompt('Введите показатель степени','1');
+//
+// function pow(x, n) {
+//     let result = x;
+//     while (n > 1) {
+//         result *= x;
+//         n--;
+//     }
+//     return result;
+// }
+//
+// alert (pow(x,n));
+
+//Короткое решение задачи на степень числа
+
+// function pow() {
+//     let x = prompt('x?', '');
+//     let n = prompt('n?', '');
+//
+//     return (n < 1 || x === null || n === null) ? false : (x ** n);
+// }
+//
+// alert(pow());
